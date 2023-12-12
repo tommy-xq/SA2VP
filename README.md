@@ -10,7 +10,7 @@ This repository contains the official PyTorch implementation for SA2VP.
 
 We use the framework from https://github.com/microsoft/unilm/tree/master/beit
 
-datasets can refer to:
+we use following datasets for evaluation:
 
 https://github.com/KMnP/vpt (FGVC)
 
@@ -24,11 +24,11 @@ This code is tested with Python-3.7.13, Pytorch = 1.12.1 and CUDA = 11.4, requir
 
 we also provide the requirement.txt for reference.
 
-## Structure of the this repo
+## Structure of this repo
 
 - `./backbone_ckpt`: save the ViT and Swin Transformer pre-trained ckpt.
 
-- `./data`: loading and setup input datasets, contains fgvc and vtab-1k.
+- `./data`: download and setup input datasets, containing fgvc and vtab-1k.
 ```
 │SA2VP/
 ├──data/
@@ -60,12 +60,12 @@ we also provide the requirement.txt for reference.
 
     * `./vpt_main/src/models/build_swin_backbone.py`: package SA2VP based on Swin. In this file, it will import model in swin_transformer_tinypara.py.
 
-- `datasets.py`: contains all datasets.
+- `datasets.py`: contain all datasets.
 - `engine_for_train.py`: engine for train and test.
 
 - 👉`vit_train_sa2vp.py`: call this to train SA2VP based on ViT.
 
-- 👉`vit_train_swin.py`: call this to train SA2VP based on Swin Transformer
+- 👉`vit_train_swin.py`: call this to train SA2VP based on Swin Transformer.
 
 - 👉`Train_nature.sh/Train_special.sh/Train_struct.sh`: scripts used for automatic training.
 
