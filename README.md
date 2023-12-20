@@ -1,6 +1,6 @@
 # SA2VP: Spatially Aligned-and-Adapted Visual Prompt
 
-paper link: will be shown soon.
+paper link: https://arxiv.org/abs/2312.10376
 
 ------
 
@@ -110,6 +110,16 @@ we also provide the requirement.txt for reference.
   - Multiple GPUs
   ```
   CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 vit_train_sa2vp.py  --data_set CIFAR --output_dir ./model_save/CIFAR --update_freq 1  --warmup_epochs 10 --epochs 100 --drop_path 0.0  --lr 1e-3 --weight_decay 1e-4 --nb_classes 100 --log_dir ./log_save --batch_size 40 --my_mode train_val --min_lr 1e-7
+  ```
+
+- Test Script:
+  - For VTAB-1k
+  ```
+  CUDA_VISIBLE_DEVICES=1 python vit_train_sa2vp.py --data_set DS_LOC --eval --batch_size 64 --resume ./model_save/DS_LOC/checkpoint-99.pth --nb_classes 16 --my_mode trainval_test
+  ```
+  - For FGVC
+  ```
+  CUDA_VISIBLE_DEVICES=1 python vit_train_sa2vp.py --data_set CAR --eval --batch_size 64 --resume ./model_save/CAR/checkpoint-best.pth --nb_classes 196 --my_mode trainval_test
   ```
 
 - Note: --my_mode is to decide train/val/test sets. In train_val: to find the best model on val set when training. In trainval_test: use train/val sets to train and report acc on test set. We follow the strategy of VPT.
