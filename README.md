@@ -56,6 +56,8 @@ we also provide the requirement.txt for reference.
 
     * 👉`./vpt_main/src/models/vit_backbones/vit_tinypara.py`: <u>SA2VP based on ViT backbone.</u> 
 
+    * 👉`./vpt_main/src/models/vit_backbones/vit_tinypara_acc.py`: <u>We have accelerated the attention calculation of SA2VP.</u> 
+
     * 👉 `./vpt_main/src/models/vit_backbones/swin_transformer_tinypara.py`: <u>SA2VP based on Swin Transformer backbone.</u>
 
     * `./vpt_main/src/models/build_swin_backbone.py`: package SA2VP based on Swin. In this file, it will import model in swin_transformer_tinypara.py.
@@ -63,7 +65,7 @@ we also provide the requirement.txt for reference.
 - `datasets.py`: contain all datasets.
 - `engine_for_train.py`: engine for train and test.
 
-- 👉`vit_train_sa2vp.py`: call this to train SA2VP based on ViT.
+- 👉`vit_train_sa2vp.py`: call this to train SA2VP based on ViT. In line 37, you can use the accelerated version by adding '_acc' to the model name.
 
 - 👉`vit_train_swin.py`: call this to train SA2VP based on Swin Transformer.
 
