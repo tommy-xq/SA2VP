@@ -6,6 +6,8 @@ paper link: https://arxiv.org/abs/2312.10376
 
 This repository contains the official PyTorch implementation for SA2VP.
 
+![model_img](https://github.com/tommy-xq/SA2VP/blob/main/imgs/SA2VP.png)
+
 ## Environment settings
 
 We use the framework from https://github.com/microsoft/unilm/tree/master/beit
