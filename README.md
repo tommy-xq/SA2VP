@@ -136,7 +136,12 @@ we also provide the requirement.txt for reference.
 If you find our work helpful in your research, please cite it as:
 
 ```
-will be shown soon.
+@inproceedings{pei2024sa2vp,
+  title={SA^2VP: Spatially Aligned-and-Adapted Visual Prompt},
+  author={Pei, Wenjie and Xia, Tongqi and Chen, Fanglin and Li, Jinsong and Tian, Jiandong and Lu, Guangming},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2024}
+}
 ```
 
 ## License
